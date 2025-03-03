@@ -35,4 +35,4 @@ tokio = { version = "=1.43.0", features = ["full"] }
 
 bollard = { version = "=0.18.1" }
 
-toml = { version = "*" }
+toml = { version = "=0.8.20" }
