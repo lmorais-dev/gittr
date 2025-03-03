@@ -1,6 +1,8 @@
-[package]
-name = "gittr"
-description = "Gittr is a self-hosted git platform for small, stealthy teams."
+[workspace]
+resolver = "3"
+members = ["ssh-auth-bin"]
+
+[workspace.package]
 version = "0.1.0"
 edition = "2024"
 authors = ["Lucas Morais <lucas.morais@lsconsult.tech>"]
@@ -13,4 +15,24 @@ readme = "README.md"
 license = "MIT"
 publish = true
 
+[package]
+name = "gittr"
+description = "Gittr is a self-hosted git platform for small, stealthy teams."
+version = { workspace = true }
+edition = { workspace = true }
+authors = { workspace = true }
+categories = { workspace = true }
+keywords = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+documentation = { workspace = true }
+readme = { workspace = true }
+license = { workspace = true }
+publish = { workspace = true }
+
 [dependencies]
+tokio = { version = "=1.43.0", features = ["full"] }
+
+bollard = { version = "=0.18.1" }
+
+toml = { version = "*" }
