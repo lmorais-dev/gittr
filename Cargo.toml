@@ -15,6 +15,34 @@ readme = "README.md"
 license = "MIT"
 publish = true
 
+[workspace.dependencies]
+tokio = { version = "=1.43.0", features = ["full"] }
+
+axum = { version = "=0.8.1" }
+
+bollard = { version = "=0.18.1" }
+reqwest = { version = "=0.12.12", features = ["json"] }
+
+serde = { version = "=1.0.218", features = ["derive"] }
+serde_json = { version = "=1.0.140", features = ["indexmap"] }
+toml = { version = "=0.8.20", features = ["indexmap", "preserve_order"] }
+hex = { version = "=0.4.3", features = ["serde"] }
+base32 = { version = "=0.5.1" }
+
+uuid = { version = "=1.15.1", features = ["serde", "v4", "v7"] }
+chrono = { version = "=0.4.40", features = ["serde"] }
+
+sqlx = { version = "=0.8.3", features = ["sqlite", "chrono", "uuid", "runtime-tokio", "tls-rustls-ring"] }
+
+rand = { version = "=0.9.0", features = ["serde"] }
+blake3 = { version = "=1.6.1", features = ["serde", "zeroize"] }
+argon2 = { version = "=0.5.3", features = ["simple", "zeroize"] }
+chacha20poly1305 = { version = "=0.10.1" }
+
+dotenvy = { version = "=0.15.7" }
+color-eyre = { version = "=0.6.3" }
+thiserror = { version = "=2.0.12" }
+
 [package]
 name = "gittr"
 description = "Gittr is a self-hosted git platform for small, stealthy teams."
@@ -31,8 +59,24 @@ license = { workspace = true }
 publish = { workspace = true }
 
 [dependencies]
-tokio = { version = "=1.43.0", features = ["full"] }
+tokio = { workspace = true }
 
-bollard = { version = "=0.18.1" }
+axum = { workspace = true }
 
-toml = { version = "=0.8.20" }
+bollard = { workspace = true }
+
+serde = { workspace = true }
+serde_json = { workspace = true }
+toml = { workspace = true }
+
+uuid = { workspace = true }
+chrono = { workspace = true }
+
+sqlx = { workspace = true }
+
+rand = { workspace = true }
+argon2 = { workspace = true }
+
+dotenvy = { workspace = true }
+color-eyre = { workspace = true }
+thiserror = { workspace = true }
