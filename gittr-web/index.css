@@ -1,0 +1,53 @@
+.gittr-web-container-baaf3e83f0e1 {
+  width: 1024px;
+  margin: 0 auto 0 auto;
+}
+
+.gittr-web-link-6f0706234f8a {}
+
+.gittr-web-link-active-6f0706234f8a {
+  color: mediumslateblue;
+}
+
+header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 1rem 0 1rem 0;
+  padding-bottom: 0.25rem;
+
+  border-bottom: 1px solid;
+}
+
+.gittr-web-headers-898c1bbb1dfe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.gittr-web-title-898c1bbb1dfe {
+  padding: 0;
+  margin: 0;
+
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.gittr-web-sub-title-898c1bbb1dfe {
+  padding: 0;
+  margin: 0;
+
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+nav {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+}

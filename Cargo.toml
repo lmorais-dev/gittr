@@ -1,6 +1,7 @@
 [workspace]
 resolver = "3"
-members = ["gittr-ssh-auth"]
+members = ["gittr-ssh-auth", "gittr-web"]
+exclude = ["www"]
 
 [workspace.package]
 version = "0.1.1"
@@ -19,9 +20,11 @@ publish = true
 tokio = { version = "=1.43.0", features = ["full"] }
 
 axum = { version = "=0.8.1" }
-
-bollard = { version = "=0.18.1" }
 reqwest = { version = "=0.12.12", features = ["json"] }
+
+leptos = { version = "=0.7.7", features = ["csr"] }
+leptos_router = { version = "=0.7.7" }
+stylance = { version = "=0.5.5" }
 
 serde = { version = "=1.0.218", features = ["derive"] }
 serde_json = { version = "=1.0.140", features = ["indexmap"] }
@@ -38,6 +41,9 @@ rand = { version = "=0.9.0", features = ["serde"] }
 blake3 = { version = "=1.6.1", features = ["serde", "zeroize"] }
 argon2 = { version = "=0.5.3", features = ["simple", "zeroize"] }
 chacha20poly1305 = { version = "=0.10.1" }
+
+tracing = { version = "=0.1.41" }
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
 
 dotenvy = { version = "=0.15.7" }
 color-eyre = { version = "=0.6.3" }
@@ -63,8 +69,6 @@ tokio = { workspace = true }
 
 axum = { workspace = true }
 
-bollard = { workspace = true }
-
 serde = { workspace = true }
 serde_json = { workspace = true }
 toml = { workspace = true }
@@ -76,6 +80,9 @@ sqlx = { workspace = true }
 
 rand = { workspace = true }
 argon2 = { workspace = true }
+
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
 
 dotenvy = { workspace = true }
 color-eyre = { workspace = true }

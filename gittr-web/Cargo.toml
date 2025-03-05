@@ -1,0 +1,29 @@
+[package]
+name = "gittr-web"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+categories.workspace = true
+keywords.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+readme.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+console_error_panic_hook = "0.1.7"
+
+leptos = { workspace = true }
+leptos_router = { workspace = true }
+stylance = { workspace = true }
+
+[package.metadata.stylance]
+output_file = "index.css"
+
+folders = ["./src"]
+extensions = [".module.css"]
+hash_len = 12
+
+class_name_pattern = "gittr-web-[name]-[hash]"

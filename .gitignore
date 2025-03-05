@@ -1,1 +1,4 @@
 /target
+/gittr-web/dist
+
+/.env
